@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/breakout_custom.png" type="Texture" id=1]
+[ext_resource path="res://VariantGame/logic/SpeedUp.gd" type="Script" id=2]
+[ext_resource path="res://VariantGame/logic/SpeedUpKinematic.gd" type="Script" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 8.0
+
+[node name="SpeedUp" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="SpeedUp" type="KinematicBody2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="SpeedUp"]
+scale = Vector2( 1.11496, 1.20012 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 65, 1, 14, 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpeedUp"]
+shape = SubResource( 1 )
