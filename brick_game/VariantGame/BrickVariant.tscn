@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/more_breakout_pieces.png" type="Texture" id=1]
+[ext_resource path="res://VariantGame/logic/BrickVariant.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 40, 8 )
+
+[node name="BrickVariant" type="Node2D"]
+
+[node name="Brick" type="StaticBody2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Brick"]
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 672, 31, 80, 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Brick"]
+shape = SubResource( 1 )

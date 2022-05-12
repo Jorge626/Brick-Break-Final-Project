@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/breakout_custom.png" type="Texture" id=1]
+[ext_resource path="res://VariantGame/logic/AddBall.gd" type="Script" id=2]
+[ext_resource path="res://VariantGame/logic/AddBalKinematic.gd" type="Script" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 8.0
+
+[node name="AddBall" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="AddBall" type="KinematicBody2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="AddBall"]
+show_behind_parent = true
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 128, 0, 16, 16 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AddBall"]
+shape = SubResource( 1 )
