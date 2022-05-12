@@ -21,8 +21,12 @@ region_rect = Rect2( 16, 368, 16, 16 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
 shape = SubResource( 1 )
 
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Ball"]
+
 [node name="AudioBrickHit" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 
 [node name="AudioBrickUnbreakable" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+
+[connection signal="screen_exited" from="Ball/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

@@ -16,3 +16,6 @@ func _physics_process(delta):
 			$AudioBrickHit.play()
 		if(collision.collider.name=='UnbreakableBrick'):
 			$AudioBrickUnbreakable.play()	
+
+func _on_VisibilityNotifier2D_screen_exited():
+	get_tree().reload_current_scene() # Replace with function body.
