@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Paddle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://CloneGame/Bricks.tscn" type="PackedScene" id=2]
 [ext_resource path="res://CloneGame/Ball.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/sounds/Chiptronical.ogg" type="AudioStream" id=4]
 [ext_resource path="res://assets/sounds/mixkit-video-game-retro-click-237.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/sounds/mixkit-repeating-arcade-beep-1084_juAnZzxM.wav" type="AudioStream" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 512, 4 )
@@ -42,6 +43,9 @@ position = Vector2( 480, 490 )
 
 [node name="AudioBrickBreak" type="AudioStreamPlayer" parent="Ball"]
 stream = ExtResource( 5 )
+
+[node name="AudioBall" type="AudioStreamPlayer" parent="Ball"]
+stream = ExtResource( 6 )
 
 [node name="Paddle" parent="." instance=ExtResource( 1 )]
 position = Vector2( 504, 528 )
