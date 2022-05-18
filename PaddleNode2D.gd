@@ -10,8 +10,10 @@ func _physics_process(delta):
 		if(collision.collider.name=='AddBall'):
 			collision.collider.add_ball_hit()
 		elif(collision.collider.name=='SlowDown'):
+			$AudioSlowDown.play()
 			collision.collider.slow_down_hit()
 		elif(collision.collider.name=='SpeedUp'):
 			collision.collider.speed_up_hit()
+			$AudioSpeedUp.play()
 
 

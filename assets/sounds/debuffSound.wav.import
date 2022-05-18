@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/debuffSound.wav-3d03dd9f8478415b9573c9e32ef720de.sample"
+
+[deps]
+
+source_file="res://assets/sounds/debuffSound.wav"
+dest_files=[ "res://.import/debuffSound.wav-3d03dd9f8478415b9573c9e32ef720de.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
